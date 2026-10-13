@@ -1,0 +1,24 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int> serviceHistory;
+
+    // 5 Recently served tokens stack mein push kar rahe hain
+    serviceHistory.push(191);
+    serviceHistory.push(182);
+    serviceHistory.push(173);
+    serviceHistory.push(164);
+    serviceHistory.push(155);
+
+    cout << "--- SERVICE HISTORY (Stack - LIFO) ---\n";
+
+    // Stack se Top element display aur pop kar rahe hain
+    while (!serviceHistory.empty()) {
+        cout << "Recently Served Token: " << serviceHistory.top() << "\n";
+        serviceHistory.pop();
+    }
+
+    return 0;
+}
