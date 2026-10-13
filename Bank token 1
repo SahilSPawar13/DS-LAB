@@ -1,0 +1,22 @@
+#include <iostream>
+#include <queue>
+
+int main() {
+   std::queue<int> tokenQueue;
+
+    tokenQueue.push(191);
+    tokenQueue.push(182);
+    tokenQueue.push(173);
+    tokenQueue.push(164);
+    tokenQueue.push(155);
+
+    std::cout << "Serving Customers (Queue - FIFO):\n";
+
+    while(!tokenQueue.empty()) {
+
+        std::cout << "Serving Customer with Order Number:" << tokenQueue.front() << "\n";
+        tokenQueue.pop();
+            
+    }
+    return 0;
+}
